@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript. Задание 7</title>
+    <script language="JavaScript">
+        function dis() {
+            name = new Array("Алгебра", "Химия", "Геометрия", "История",  "ОБЖ", "Физкультура");
+            gumName = new Array(); 
+            gumName = name.slice(6,9); 
+            techName = name.slice(1, 3, 4, 7);
+            document.write(gumName+"<br>");
+            document.write(techName);
+        }
+    </script>
+</head>
+<body>
+    <script language="JavaScript">
+        year = new Array("декабрь", "январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь");
+        summer = new Array(); //летние месяцы
+        summer = year.slice(6,9);
+        document.write(summer+"<br>");
+        dis();
+    </script>
+</body>
+</html>
