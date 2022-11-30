@@ -3,33 +3,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практическая работа №3. Объекты клиентских приложений. Обработка событий. Задание 14.</title>
-</head>
-<body>
+    <title>JavaScript. Задание 14</title>
     <style>
-        .textarea {
-            overflow: scroll;
-            height: 100px;
-            resize: none;
+        html {
+        padding-top: 20px;
+        background-repeat:no-repeat;
+        background-position:left top;
+        background-color:rgba(151, 164, 208, 0.8);
+    } 
+
+    body {
+        width: 90%;
+        padding: 20px;
+        margin: 50px auto;
+        border-radius:30px;
+        box-shadow: 20px 20px 20px rgba(0,0,0,.5);
+        background-color:rgba(65, 193, 58, 0.637);	
+    }
+
+    textarea {
+        overflow: scroll;
+        height: 100px;
+        resize: none;
         }
     </style>
+</head>
+<body>
     <form name="forms" onsubmit="changePass()">
-        Ваше имя:*<input type="text" size="5" value="" required><br>
-        Пароль:*<input id="pass1" type="password" size="5" minlength="4" value="" required><br>
-        Потверждение пароля:*<input id="pass2"  type="password" size="5" required><br>
-        Электронный адрес:*<input type="email" size="5" required><br>
-        Тема сообщения:*<input type="text" size="5" required><br>
-        Сообщение:<textarea class="textarea" minlength="10"></textarea><br>
-        <input type="submit" value="Отправить"><input type="reset" value="Очистить"><br>
-        * - необходимые для заполнения
+        <input type="text" size="15" value="" required>* Ваш логин<br/>
+        <input id="pass" type="password" size="15" minlength="4" value="" required>* Пароль<br/>
+        <input id="conf_pass"  type="password" size="15" required>* Потверждение пароля<br/>
+        <input type="email" size="15" required>* Электронный адрес<br/>
+        <input type="text" size="15" required> Тема сообщения<br/>
+        <textarea class="textarea" minlength="10"></textarea> Сообщение<br/>
+        <input type="submit" value="Отправить"> <input type="reset" value="Очистить"><br/>
+        * - необходимые для заполнения поля
     </form>
-    <script type="text/javascript">        
-        let pass1 = document.getElementById("pass1").value;
-        let pass2 = document.getElementById("pass2").value;
+    <script>        
+        let pass1 = document.getElementById("pass").value;
+        let pass2 = document.getElementById("conf_pass").value;
         function changePass() {
-            if (pass1 == pass2) {
+            if (pass == conf_pass) {
             alert ("Пароль введен правильно!");
             } else {
             alert ("Пароль введен неправильно!");
